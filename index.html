@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis</title>
+    <meta name="description" content="Simetra's personal website.">
+    <link rel="preload" href="assets/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/all.css">
+    </noscript>
+
+
+
+    <style>
+        .proficient {
+            color: green
+        }
+
+        .semi-proficient {
+            color: darkgreen
+        }
+
+        .intermediate {
+            color: orange
+        }
+
+        .semi-awful {
+            color: tomato
+        }
+
+        .awful {
+            color: red
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 150%;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 50%;
+        }
+
+        hr {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        h2 {
+            margin-bottom: 0px;
+        }
+
+        .prevent-hyperlink {
+            text-decoration: none;
+            color: black
+        }
+
+        .underline {
+            text-decoration: underline;
+            color: blue
+        }
+
+        .profile {
+            display: flex;
+            gap: 10px;
+        }
+
+        .profile-img {
+            margin-left: auto;
+        }
+
+        .bio {
+            flex-direction: column;
+        }
+
+        .name-a {
+            color: #AA0000
+        }
+
+        .name-r {
+            color: orange
+        }
+
+        .name-t {
+            color: darkgoldenrod
+        }
+
+        .name-e {
+            color: #00AA00
+        }
+
+        .name-m {
+            color: #5555FF
+        }
+
+        .name-i {
+            color: #FF55FF
+        }
+
+        .name-s {
+            color: #AA00AA
+        }
+
+        #name {
+            font-weight: bolder;
+        }
+
+        #age {
+            padding: .2em .4em;
+            margin: 0;
+            background-color: rgba(175, 184, 193, 0.2);
+            border-radius: 6px;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+        }
+
+        footer {
+            text-align: center;
+            color: grey;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World ^-^</h1>
+
+    <section class="profile">
+        <div class="bio">
+
+            <p>Hi! I'm
+                <span id="name">
+                    <span class="name-a">A</span><span class="name-r">r</span><span class="name-t">t</span><span
+                        class="name-e">e</span><span class="name-m">m</span><span class="name-i">i</span><span
+                        class="name-s">s</span></span></span>
+                (she/her) & this is my personal website!
+            </p>
+
+            <p>I'm a software engineer from the UK. I'm <output id="age"><noscript>19 years old</noscript></output></p>
+            <script>
+                function updateAge() {
+                    var birthday = new Date(2002, 10 - 1, 4);
+                    var now = new Date();
+
+                    const msPerYear = 24 * 60 * 60 * 1000 * 365;
+                    let daysSince = (now.getTime() - birthday.getTime()) / msPerYear;
+                    let secondsSince = (now.getTime() - birthday.getTime()) / 1000;
+
+                    let years = Math.floor(daysSince);
+                    let seconds = Math.floor(secondsSince)
+                    isBirthday = false
+                    if (birthday.getMonth() == now.getMonth() && birthday.getDate() == now.getDate()) {
+                        isBirthday = true;
+                    }
+                    let outputString = `${seconds} seconds (${years} year${years > 1 ? "s" : ""}) old ${isBirthday ? " 🎂" : ""}`;
+
+                    document.getElementById("age").textContent = outputString
+                }
+                updateAge()
+                setInterval(updateAge, 1000);
+            </script>
+        </div>
+        <picture class="profile-img">
+            <source srcset="assets/profile.webp" type="image/webp" alt="My profile picture" width="236" height="236">
+            <img alt="My profile picture" width="236" height="236" src="assets/profile.png"></img>
+        </picture>
+
+
+    </section>
+
+    <h2>Projects</h2>
+    <ul>
+        <li>My <a href="https://github.com/Simetraa/Simetraa">.dotfile</a> (scripts to set up my workspace just the way
+            I like it)</li>
+        <li><a href="https://github.com/Simetraa/connect-four">Connect Four</a> - A game of connect four written in
+            Typescript & Go</li>
+        <li>BandcampDL, a WIP cross-platform tool for downloading albums from Bandcamp (interface cloned from <a
+                href="https://github.com/Otiel/BandcampDownloader">BandcampDownloader</a>)</li>
+        <li>Multiline - a Go library which takes a multiline input from the user (inspired by <a
+                href="https://github.com/git/git/blob/master/editor.c">editor.c in Git</a>)</li>
+        <li><a href="https://github.com/Simetraa/ProtonWatcher">ProtonWatcher</a> - a script to watch ProtonVPN logs and
+            automatically update qBittorrent</li>
+    </ul>
+
+    <hr>
+
+    <h2>Technologies / Tools</h2>
+    <div class="row">
+        <ul class="column">
+            <li class="proficient">Python</li>
+            <li class="proficient">JS/TS</li>
+            <li class="proficient">Visual Studio Code</li>
+            <li class="proficient">Pycharm</li>
+            <li class="proficient">Goland</li>
+
+            <li class="semi-proficient">Go</li>
+
+            <li class="intermediate">HTML</li>
+            <li class="intermediate">Bash</li>
+
+            <li class="semi-awful">Java</li>
+            <li class="awful">CSS</li>
+        </ul>
+        <aside class="column">
+            <p>Key</p>
+            <ul>
+                <li class="proficient">Proficient</li>
+                <li class="semi-proficient">Semi-Proficient</li>
+                <li class="intermediate">Intermediate</li>
+                <li class="semi-awful">Semi-awful</li>
+                <li class="awful">Awful</li>
+            </ul>
+        </aside>
+    </div>
+
+    <hr>
+
+    <h2>Links <i class="fa-regular fa-user"></i></h2>
+    <ul class="fa-ul">
+        <li><span class="fa-li"><i class="fa-brands fa-github"></i></span><a rel="noopener" class="prevent-hyperlink"
+                target="_blank" href="https://github.com/Simetraa"><span class="underline">Github/Simetraa</span> <i
+                    class="fa-solid fa-arrow-up-right-from-square"></i></a></li>
+        <li><span class="fa-li"><i class="fa-solid fa-envelope"></i></i></span><a
+                href="mailto:simetra@simetra.dev">E-mail/simetra@simetra.dev</a></li>
+        <li><span class="fa-li"><i class="fa-brands fa-discord"></i></i></span><a class="prevent-hyperlink"
+                href="javascript:copyDiscord()"><span class="underline">Discord/Artemis#5435</span> <i id="copy-status"
+                    class="fa-solid fa-copy"></i></span></a><noscript> <i style="color: red"
+                    class="fa-solid fa-triangle-exclamation"></i>Javascript is disabled</noscript></li>
+        <script>
+            function copyDiscord() {
+                navigator.clipboard.writeText('Artemis#5435');
+                copy = document.getElementById("copy-status")
+                copy.classList.remove("fa-copy")
+                copy.classList.add("fa-check")
+
+                setTimeout(() => {
+                    document.getElementById("copy-status").classList.remove("fa-check");
+                    document.getElementById("copy-status").classList.add("fa-copy");
+                }, 1000);
+            }
+        </script>
+    </ul>
+
+    <footer>Site last modified 15/06/2022</footer>
+
+</html>
