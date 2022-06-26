@@ -1,0 +1,3 @@
+[submodule "assets/glyphs"]
+	path = assets/glyphs
+	url = https://github.com/Simetraa/glyphs.git
