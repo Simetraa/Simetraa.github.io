@@ -1,0 +1,74 @@
+.name-r {
+    color: orange
+}
+.name-t {
+    color: darkgoldenrod
+}
+.name-e {
+    color: #00AA00
+}
+.name-m {
+    color: #5555FF
+}
+.name-i {
+    color: #FF55FF
+}
+.name-s {
+    color: #AA00AA
+}
+.name {
+    font-weight: bolder;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.profile img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 150%;
+    overflow-x: hidden;
+}
+#age {
+    padding: .2em .4em;
+    margin: 0;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+    -webkit-box-decoration-break: clone;
+}
+
+footer {
+    text-align: center;
+    color: grey;
+}
+
+hr {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+h2 {
+    margin-bottom: 8px;
+    margin-top: 8px
+}
+h3 {
+    margin-bottom: 4px;
+    margin-top:4px
+}
+.prevent-hyperlink {
+    text-decoration: none;
+    color: black
+    }
+.underline {
+text-decoration: underline;
+color: blue
+}
+
+details img {
+    margin: 10px;
+    width:100%;
+    width: -webkit-fill-available;
+}

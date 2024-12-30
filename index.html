@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="assets/all.css">
     </noscript>
 
-    <link rel="stylesheet" href="assets/styles.css">
-
+    <link rel="stylesheet" href="assets/mobile.css">
+    <link rel="stylesheet" media="only screen and (min-width:720px)" href="assets/desktop.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -27,14 +27,14 @@
         <div class="bio">
 
             <p>Hi! I'm
-                <span id="name">
-                    <span class="name-a">A</span><span class="name-r">r</span><span class="name-t">t</span><span
-                        class="name-e">e</span><span class="name-m">m</span><span class="name-i">i</span><span
-                        class="name-s">s</span></span></span>
-                (she/her) & this is my personal website!
-            </p>
+                <span class="name">
+                    <span class="name-a">A</span><span class="name-r">r</span><span class="name-t">t</span><span class="name-e">e</span><span class="name-m">m</span><span class="name-i">i</span><span class="name-s">s</span>
+                </span>
+                & this is my personal website!
 
-            <p>I'm a software engineer from the UK. I'm <output id="age"><noscript>19 years old</noscript></output></p>
+            <p>I'm a software engineering student from the UK. I'm <output id="age"><noscript>22 years old</noscript></output>. I  like reading, learning new languages and programming!</p>
+            <p>My favourite author is Terry Pratchett, and I'm learning German & Dutch currently.</p>
+            <p>You can see some of my projects on my <a href="https://github.com/Simetraa">GitHub</a>!</p>            
             <script>
                 function updateAge() {
                     var birthday = new Date(2002, 10 - 1, 4);
@@ -45,14 +45,11 @@
                     let secondsSince = (now.getTime() - birthday.getTime()) / 1000;
 
                     let years = Math.floor(daysSince);
-                    let seconds = Math.floor(secondsSince)
-                    isBirthday = false
-                    if (birthday.getMonth() == now.getMonth() && birthday.getDate() == now.getDate()) {
-                        isBirthday = true;
-                    }
-                    let outputString = `${seconds} seconds (${years} year${years > 1 ? "s" : ""}) old ${isBirthday ? " 🎂" : ""}`;
+                    let seconds = Math.floor(secondsSince);
+                    let isBirthday = birthday.getMonth() == now.getMonth() && birthday.getDate() == now.getDate();
+                    outputString = `${seconds} seconds (${years} year${years > 1 ? "s" : ""}) old${isBirthday ? " 🎂" : ""}`;
 
-                    document.getElementById("age").textContent = outputString
+                    document.getElementById("age").textContent = outputString;
                 }
                 updateAge()
                 setInterval(updateAge, 1000);
@@ -72,46 +69,48 @@
             I like it)</li>
         <li><a href="https://github.com/Simetraa/connect-four">Connect Four</a> - A game of connect four written in
             Typescript & Go</li>
-        <li>BandcampDL, a WIP cross-platform tool for downloading albums from Bandcamp (interface cloned from <a
-                href="https://github.com/Otiel/BandcampDownloader">BandcampDownloader</a>)</li>
-        <li>Multiline - a Go library which takes a multiline input from the user (inspired by <a
-                href="https://github.com/git/git/blob/master/editor.c">editor.c in Git</a>)</li>
         <li><a href="https://github.com/Simetraa/ProtonWatcher">ProtonWatcher</a> - a script to watch ProtonVPN logs and
             automatically update qBittorrent</li>
-        <li>A set of <a href="https://github.com/Simetraa/glyphs">handcoded SVG images</a> of glyphs from The Owl House
-        </li>
+        <li>A set of <a href="/glyphs">handcoded SVG images</a> of glyphs from The Owl House</li>
+        <li>A <a href="https://github.com/Simetraa/bandcamp_dl">tool</a> for downloading albums from Bandcamp</li>
+    </ul>
     </ul>
 
     <hr>
 
     <h2>Technologies / Tools <i class="fa-solid fa-computer"></i></h2>
-    <div class="row">
-        <ul class="column">
-            <li class="proficient">Python</li>
-            <li class="proficient">JS/TS</li>
-            <li class="proficient">Visual Studio Code</li>
-            <li class="proficient">Pycharm</li>
-            <li class="proficient">Goland</li>
-
-            <li class="semi-proficient">Go</li>
-
-            <li class="intermediate">HTML</li>
-            <li class="intermediate">Bash</li>
-
-            <li class="semi-awful">Java</li>
-            <li class="awful">CSS</li>
-        </ul>
-        <aside class="column">
-            <p>Key</p>
+    <ul class="technologies">
+        <li>
+            <h3>Web Development</h3>
             <ul>
-                <li class="proficient">Proficient</li>
-                <li class="semi-proficient">Semi-Proficient</li>
-                <li class="intermediate">Intermediate</li>
-                <li class="semi-awful">Semi-awful</li>
-                <li class="awful">Awful</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript/TypeScript</li>
+                <li>PHP</li>
+                <li>Laravel</li>
             </ul>
-        </aside>
-    </div>
+        </li>
+         <li>
+        <h3>Other</h3>
+        <ul>
+            <li>Python</li>
+            <li>C#</li>
+            <li>Go</li>
+            <li>Java</li>
+        </ul>
+    </li>
+    <li>
+        <h3>Tooling</h3>
+        <ul>
+            <li>Visual Studio Code</li>
+            <li>Visual Studio</li>
+            <li>Pycharm</li>
+            <li>Goland</li>
+            <li>PHPStorm</li>
+            <li>GitHub</li>
+        </ul>
+    </li>
+</ul>
 
     <hr>
 
@@ -141,6 +140,6 @@
         </script>
     </ul>
 
-    <footer>Site last modified <time datetime="2022-06-24">24/06/2022</time></footer>
+    <footer>Site last updated <time datetime="2024-12-30">30/12/2024</time></footer>
 
 </html>
