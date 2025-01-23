@@ -1,8 +1,11 @@
+.name-a {
+    color: #AA0000
+}
 .name-r {
-    color: orange
+    color: #ffa500
 }
 .name-t {
-    color: darkgoldenrod
+    color: #b8860b
 }
 .name-e {
     color: #00AA00
@@ -24,14 +27,16 @@
     flex-direction: column;
     gap: 10px;
 }
-.profile img {
+.profile-img {
     max-width: 100%;
     height: auto;
+    align-self: center;
 }
 body {
     font-family: 'Courier New', Courier, monospace;
     line-height: 150%;
     overflow-x: hidden;
+    font-size: 18px;
 }
 #age {
     padding: .2em .4em;
@@ -39,6 +44,7 @@ body {
     background-color: rgba(175, 184, 193, 0.2);
     border-radius: 6px;
     -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
 }
 
 footer {
@@ -52,12 +58,17 @@ hr {
 }
 h2 {
     margin-bottom: 8px;
-    margin-top: 8px
+    margin-top: 8px;
 }
 h3 {
     margin-bottom: 4px;
     margin-top:4px
 }
+
+h2 i {
+    margin-left: 12px;
+}
+
 .prevent-hyperlink {
     text-decoration: none;
     color: black
@@ -69,6 +80,6 @@ color: blue
 
 details img {
     margin: 10px;
-    width:100%;
     width: -webkit-fill-available;
+    width: 100%;
 }
