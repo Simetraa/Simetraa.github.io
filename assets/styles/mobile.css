@@ -63,6 +63,10 @@ a:hover, .underline:hover {
     padding: 6px;
 }
 
+[data-theme-toggle] span {
+    display: none;
+}
+
 [data-theme-toggle] i {
     color: var(--color-background);
 }

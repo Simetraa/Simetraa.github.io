@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artemis</title>
     <meta name="description" content="Simetra's personal website.">
-    <link rel="preload" href="assets/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/styles/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="assets/all.css">
+        <link rel="stylesheet" href="assets/styles/all.css">
     </noscript>
 
-    <link rel="stylesheet" href="assets/mobile.css">
-    <link rel="stylesheet" media="only screen and (min-width:720px)" href="assets/desktop.css">
+    <link rel="stylesheet" href="assets/styles/mobile.css">
+    <link rel="stylesheet" media="only screen and (min-width:720px)" href="assets/styles/desktop.css">
 
-    <script src="assets/theme.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+    <script src="assets/js/discord.js" defer></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -130,19 +131,6 @@
                 href="javascript:copyDiscord()"><span class="underline">Discord/Artemis#5435</span> <i id="copy-status"
                     class="fa-solid fa-copy"></i></span></a><noscript> <i style="color: red"
                     class="fa-solid fa-triangle-exclamation"></i>Javascript is disabled</noscript></li>
-        <script>
-            function copyDiscord() {
-                navigator.clipboard.writeText('Artemis#5435');
-                copy = document.getElementById("copy-status")
-                copy.classList.remove("fa-copy")
-                copy.classList.add("fa-check")
-
-                setTimeout(() => {
-                    document.getElementById("copy-status").classList.remove("fa-check");
-                    document.getElementById("copy-status").classList.add("fa-copy");
-                }, 1000);
-            }
-        </script>
     </ul>
 
     <footer>Site last updated <time datetime="2024-01-30">30/01/2024</time></footer>

@@ -20,3 +20,7 @@ details img {
 body {
     width: unset;
 }
+
+[data-theme-toggle] span {
+    display: flex;
+}
