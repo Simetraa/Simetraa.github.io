@@ -20,3 +20,16 @@ details img {
 body {
     width: unset;
 }
+
+.gallery {
+    min-width: 30%;
+}
+
+.gallery-images > li > img {
+    height: unset;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+}

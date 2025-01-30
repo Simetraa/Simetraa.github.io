@@ -83,3 +83,56 @@ details img {
     width: -webkit-fill-available;
     width: 100%;
 }
+
+.flex-horizontal {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add some space between the elements */
+}
+
+.gallery {
+    position: relative;
+    width: 100%;
+    min-height: 500px; /* Set a minimum height for the gallery */
+}
+
+.controls {
+    position: absolute;
+    display: flex;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%); /* Adjust position to center */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    gap: 8px;
+    background-color: rgb(156, 153, 147, 0.75);
+    padding: 8px;
+    border-radius: 12px;
+    z-index: 4;
+}
+
+.controls button {
+    font-family: 'Courier New', Courier, monospace;;
+}
+
+.gallery-images > li {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.gallery-images > li.active {
+    display: block;
+}
+
+.gallery-images > li > img {
+    object-fit: contain;
+    width: 100%; /* Ensure the image takes up the full width of the gallery */
+    height: 100%; /* Ensure the image takes up the full height of the gallery */
+}
+

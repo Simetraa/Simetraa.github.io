@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glyphs</title>
+    <link rel="stylesheet" href="assets/mobile.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (min-width:720px)"
+      href="assets/desktop.css"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+
+  <body>
+    <h1>Projects</h1>
+
+    <div>
+      <section>
+        <div class="project-item">
+          <div>
+            <h2>Journal</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              euismod sollicitudin libero. Suspendisse potenti. Quisque faucibus
+              cursus ante eget gravida. Pellentesque cursus euismod tortor
+              blandit ultrices. Fusce mattis nulla non magna ultrices imperdiet.
+              Phasellus vitae volutpat nunc. Nullam viverra bibendum tincidunt.
+              Mauris interdum ipsum mollis, pulvinar sapien ut, mattis felis.
+              Vivamus in semper justo. Nunc accumsan tristique dapibus.
+              Curabitur sit amet lobortis orci, ac egestas libero.
+            </p>
+            <p>
+              Duis sit amet viverra arcu. Proin consequat nulla risus, molestie
+              eleifend nisl efficitur vel. Pellentesque eget augue id leo
+              pellentesque pretium id porttitor magna. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra, per inceptos
+              himenaeos. Curabitur in neque eu nisl suscipit varius.
+              Pellentesque efficitur dapibus consectetur. Curabitur diam ex,
+              tempor eget scelerisque id, auctor at enim. Ut a vehicula erat.
+              Mauris blandit ante et nisl imperdiet finibus. Nullam massa leo,
+              facilisis vitae congue sit amet, pellentesque feugiat metus.
+              Phasellus non ipsum eget erat porta faucibus. Mauris condimentum
+              congue condimentum. Sed turpis diam, ornare id feugiat ac,
+              efficitur quis risus. Nulla facilisi. Duis eleifend ornare dui,
+              vitae rhoncus enim pretium in. Proin sed nunc neque.
+            </p>
+          </div>
+          <div class="gallery" index="0">
+            <div class="controls">
+              <button class="prev">Previous</button>
+              <div class="active-label"></div>
+              <button class="next">Next</button>
+            </div>
+            <ul class="gallery-images">
+              <li class="active">
+                <img src="assets/profile.webp" />
+              </li>
+              <li>
+                <img src="assets/home.png" />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-item">
+          <div>
+            <h2>Energy Efficiency Calculator</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              euismod sollicitudin libero. Suspendisse potenti. Quisque faucibus
+              cursus ante eget gravida. Pellentesque cursus euismod tortor
+              blandit ultrices. Fusce mattis nulla non magna ultrices imperdiet.
+              Phasellus vitae volutpat nunc. Nullam viverra bibendum tincidunt.
+              Mauris interdum ipsum mollis, pulvinar sapien ut, mattis felis.
+              Vivamus in semper justo. Nunc accumsan tristique dapibus.
+              Curabitur sit amet lobortis orci, ac egestas libero.
+            </p>
+            <p>
+              Duis sit amet viverra arcu. Proin consequat nulla risus, molestie
+              eleifend nisl efficitur vel. Pellentesque eget augue id leo
+              pellentesque pretium id porttitor magna. Class aptent taciti
+              sociosqu ad litora torquent per conubia nostra, per inceptos
+              himenaeos. Curabitur in neque eu nisl suscipit varius.
+              Pellentesque efficitur dapibus consectetur. Curabitur diam ex,
+              tempor eget scelerisque id, auctor at enim. Ut a vehicula erat.
+              Mauris blandit ante et nisl imperdiet finibus. Nullam massa leo,
+              facilisis vitae congue sit amet, pellentesque feugiat metus.
+              Phasellus non ipsum eget erat porta faucibus. Mauris condimentum
+              congue condimentum. Sed turpis diam, ornare id feugiat ac,
+              efficitur quis risus. Nulla facilisi. Duis eleifend ornare dui,
+              vitae rhoncus enim pretium in. Proin sed nunc neque.
+            </p>
+          </div>
+          <div class="gallery" index="0">
+            <div class="controls">
+              <button class="prev">Previous</button>
+              <div class="active-label"></div>
+              <button class="next">Next</button>
+            </div>
+            <ul class="gallery-images">
+              <li class="active">
+                <img src="assets/profile.webp" />
+              </li>
+              <li>
+                <img src="assets/home.png" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <script>
+        document.querySelectorAll(".gallery").forEach((gallery) => {
+          let index = 0;
+          const prevButtonEl = gallery.querySelector(".prev");
+          const activeLabelEl = gallery.querySelector(".active-label");
+          const nextButtonEl = gallery.querySelector(".next");
+          const galleryItems = gallery.querySelectorAll(".gallery-images > li");
+          const galleryImagesLength = galleryItems.length;
+
+          function update(n) {
+            console.log(n);
+            galleryItems[index].classList.remove("active");
+            index = (index + galleryImagesLength + n) % galleryImagesLength;
+            galleryItems[index].classList.add("active");
+            activeLabelEl.textContent = `${index + 1} / ${galleryImagesLength}`;
+          }
+
+          activeLabelEl.textContent = `${index + 1} / ${galleryImagesLength}`;
+
+          prevButtonEl.addEventListener("click", () => update(-1));
+          nextButtonEl.addEventListener("click", () => update(1));
+        });
+      </script>
+    </div>
+  </body>
+</html>
