@@ -16,6 +16,8 @@
 
     <script src="assets/js/theme.js" defer></script>
     <script src="assets/js/discord.js" defer></script>
+    <script src="assets/js/age.js" defer></script>
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -40,25 +42,6 @@
             <p>I'm a software engineering student from the UK. I'm <output id="age"><noscript>22 years old</noscript></output>. I  like reading, learning new languages and programming!</p>
             <p>My favourite author is Terry Pratchett, and I'm learning German & Dutch currently.</p>
             <p>You can see some of my projects on my <a href="https://github.com/Simetraa">GitHub</a>!</p>
-            <script>
-                function updateAge() {
-                    var birthday = new Date(2002, 10 - 1, 4);
-                    var now = new Date();
-
-                    const msPerYear = 24 * 60 * 60 * 1000 * 365;
-                    let daysSince = (now.getTime() - birthday.getTime()) / msPerYear;
-                    let secondsSince = (now.getTime() - birthday.getTime()) / 1000;
-
-                    let years = Math.floor(daysSince);
-                    let seconds = Math.floor(secondsSince);
-                    let isBirthday = birthday.getMonth() == now.getMonth() && birthday.getDate() == now.getDate();
-                    outputString = `${seconds} seconds (${years} year${years > 1 ? "s" : ""}) old${isBirthday ? " 🎂" : ""}`;
-
-                    document.getElementById("age").textContent = outputString;
-                }
-                updateAge()
-                setInterval(updateAge, 1000);
-            </script>
         </div>
         <picture class="profile-img">
             <source srcset="assets/profile.webp" type="image/webp" alt="My profile picture" width="236" height="236">
