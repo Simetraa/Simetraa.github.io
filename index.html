@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="assets/mobile.css">
     <link rel="stylesheet" media="only screen and (min-width:720px)" href="assets/desktop.css">
 
+    <script src="assets/theme.js" defer></script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -21,7 +23,9 @@
 </head>
 
 <body>
-    <h1>Hello World ^-^</h1>
+    <div class="header">
+        <h1>Hello World ^-^ </h1><button data-theme-toggle type="button"><span>light mode</span><i class="fa-regular fa-moon"></i></span>
+    </div>
 
     <section class="profile">
         <div class="bio">
@@ -141,6 +145,5 @@
         </script>
     </ul>
 
-    <footer>Site last updated <time datetime="2024-12-30">30/12/2024</time></footer>
-
+    <footer>Site last updated <time datetime="2024-01-30">30/01/2024</time></footer>
 </html>

@@ -1,3 +1,72 @@
+:root {
+    --color-link-visited: rgb(176, 11, 105);
+    --font: 'Courier New', Courier, monospace;
+}
+
+[data-theme="light"] {
+    --color-primary: #010104; 
+    --color-background: #fdfdfd;
+    --color-link: #0000EE;
+}
+
+[data-theme="dark"] {
+    --color-primary: #efe7e7; 
+    --color-background: #0e0e0e;
+    --color-link: #5853ec
+}
+
+body {
+    color: var(--color-primary);
+    background-color: var(--color-background);
+    transition: color 0.5s ease, background-color 0.5s ease;
+    font-family: var(--font);
+    line-height: 150%;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+
+i {
+    color: var(--color-primary);
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+a, .underline {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+a:hover, .underline:hover {
+    color: var(--color-link-visited);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.header i {
+    font-size: 2em;
+}
+
+[data-theme-toggle] {
+    display: flex;
+    align-items:center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 18px;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border-radius: 16px;
+    padding: 6px;
+}
+
+[data-theme-toggle] i {
+    color: var(--color-background);
+}
+
 .name-a {
     color: #AA0000
 }
@@ -32,12 +101,7 @@
     height: auto;
     align-self: center;
 }
-body {
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 150%;
-    overflow-x: hidden;
-    font-size: 18px;
-}
+
 #age {
     padding: .2em .4em;
     margin: 0;
@@ -71,11 +135,6 @@ h2 i {
 
 .prevent-hyperlink {
     text-decoration: none;
-    color: black
-    }
-.underline {
-text-decoration: underline;
-color: blue
 }
 
 details img {
