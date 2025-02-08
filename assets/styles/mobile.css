@@ -1,0 +1,148 @@
+:root {
+    --color-link-visited: rgb(176, 11, 105);
+    --font: 'Courier New', Courier, monospace;
+}
+
+[data-theme="light"] {
+    --color-primary: #010104; 
+    --color-background: #fdfdfd;
+    --color-link: #0000EE;
+}
+
+[data-theme="dark"] {
+    --color-primary: #efe7e7; 
+    --color-background: #0e0e0e;
+    --color-link: #5853ec
+}
+
+body {
+    color: var(--color-primary);
+    background-color: var(--color-background);
+    transition: color 0.5s ease, background-color 0.5s ease;
+    font-family: var(--font);
+    line-height: 150%;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+
+i {
+    color: var(--color-primary);
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+a, .underline {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+a:hover, .underline:hover {
+    color: var(--color-link-visited);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.header i {
+    font-size: 2em;
+}
+
+[data-theme-toggle] {
+    display: flex;
+    align-items:center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 18px;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    border-radius: 16px;
+    padding: 6px;
+}
+
+[data-theme-toggle] span {
+    display: none;
+}
+
+[data-theme-toggle] i {
+    color: var(--color-background);
+}
+
+.name-a {
+    color: #AA0000
+}
+.name-r {
+    color: #ffa500
+}
+.name-t {
+    color: #b8860b
+}
+.name-e {
+    color: #00AA00
+}
+.name-m {
+    color: #5555FF
+}
+.name-i {
+    color: #FF55FF
+}
+.name-s {
+    color: #AA00AA
+}
+.name {
+    font-weight: bolder;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.profile-img {
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+#age {
+    padding: .2em .4em;
+    margin: 0;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+footer {
+    text-align: center;
+    color: grey;
+}
+
+hr {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+h2 {
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+h3 {
+    margin-bottom: 4px;
+    margin-top:4px
+}
+
+h2 i {
+    margin-left: 12px;
+}
+
+.prevent-hyperlink {
+    text-decoration: none;
+}
+
+details img {
+    margin: 10px;
+    width: -webkit-fill-available;
+    width: 100%;
+}

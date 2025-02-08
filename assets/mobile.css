@@ -96,6 +96,7 @@ details img {
     min-height: 500px; /* Set a minimum height for the gallery */
 }
 
+
 .controls {
     position: absolute;
     display: flex;
@@ -109,6 +110,7 @@ details img {
     padding: 8px;
     border-radius: 12px;
     z-index: 4;
+    width: fit-content;
 }
 
 .controls button {

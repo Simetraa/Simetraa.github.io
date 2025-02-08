@@ -33,3 +33,15 @@ body {
     display: flex;
     flex-direction: row; /* Stack elements vertically */
 }
+
+.align-left > .description {
+    flex: 1;
+}
+
+.align-left > .gallery {
+    flex: 2;
+}
+
+[data-theme-toggle] span {
+    display: flex;
+}
