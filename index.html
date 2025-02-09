@@ -26,22 +26,33 @@
 </head>
 
 <body>
-    <div class="header">
-        <h1>Hello World ^-^ </h1><button data-theme-toggle type="button"><span>light mode</span><i class="fa-regular fa-moon"></i></span>
-    </div>
+    <header>
+        <div>
+            <h2>artemis@simera:~$ ls</h2>
+            <nav>
+                <ul>
+                    <li><a href="/" class="activated">Home</a></li>
+                    <li><a href="/projects.html">Projects</a></li>
+                    <li><button data-theme-toggle type="button"><span class="underline">light mode</span><i class="fa-regular fa-moon"></i></span></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <section class="profile">
-        <div class="bio">
+        <div>
+            <h1>Hello world ^-^</h1>
+            <div class="bio">
+                <p>Hi! I'm
+                    <span class="name">
+                        <span class="name-a">A</span><span class="name-r">r</span><span class="name-t">t</span><span class="name-e">e</span><span class="name-m">m</span><span class="name-i">i</span><span class="name-s">s</span>
+                    </span>
+                    & this is my personal website!
 
-            <p>Hi! I'm
-                <span class="name">
-                    <span class="name-a">A</span><span class="name-r">r</span><span class="name-t">t</span><span class="name-e">e</span><span class="name-m">m</span><span class="name-i">i</span><span class="name-s">s</span>
-                </span>
-                & this is my personal website!
-
-            <p>I'm a software engineering student from the UK. I'm <output id="age"><noscript>22 years old</noscript></output>. I  like reading, learning new languages and programming!</p>
-            <p>My favourite author is Terry Pratchett, and I'm learning German & Dutch currently.</p>
-            <p>You can see some of my projects on my <a href="https://github.com/Simetraa">GitHub</a>!</p>
+                <p>I'm a software engineering student from the UK. I'm <output id="age"><noscript>22 years old</noscript></output>. I  like reading, learning new languages and programming!</p>
+                <p>My favourite author is Terry Pratchett, and I'm learning German & Dutch currently.</p>
+                <p>You can see some of my projects on my <a href="https://github.com/Simetraa">GitHub</a>!</p>
+            </div>
         </div>
         <picture class="profile-img">
             <source srcset="assets/profile.webp" type="image/webp" alt="My profile picture" width="236" height="236">

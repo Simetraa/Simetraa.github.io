@@ -6,9 +6,9 @@
     <title>Projects</title>
     <link rel="stylesheet" href="assets/styles/mobile.css" />
     <link rel="stylesheet" media="only screen and (min-width:720px)" href="assets/styles/desktop.css"/>
-
+    
+    <script src="assets/js/theme.js" defer></script>
     <script src="assets/js/gallery.js" defer></script>
-
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -17,7 +17,19 @@
   </head>
 
   <body>
-    <h1>Projects</h1>
+    <header>
+        <div>
+            <h2>artemis@simera:~$ ls</h2>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/projects.html" class="activated">Projects</a></li>
+                    <li><button data-theme-toggle type="button"><span class="underline">light mode</span><i class="fa-regular fa-moon"></i></span></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <div>
         <div class="project-item align-left">
           <a name="protonwatcher"></a>

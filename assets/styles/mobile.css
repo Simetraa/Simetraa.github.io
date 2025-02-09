@@ -7,6 +7,7 @@
     --color-primary: #010104; 
     --color-background: #fdfdfd;
     --color-link: #0000EE;
+
 }
 
 [data-theme="dark"] {
@@ -39,28 +40,59 @@ a:hover, .underline:hover {
     color: var(--color-link-visited);
 }
 
-.header {
+header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     vertical-align: middle;
 }
 
-.header i {
-    font-size: 2em;
+header > div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+header .activated {
+    font-weight: bolder;
+}
+
+header nav ul::before {
+    content: "[";
+}
+
+header nav ul::after {
+    content: "]";
+}
+header nav ul {
+    display: flex;
+    gap: 8px;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    font-size: 1.5em;
+}
+
+
+
+header nav ul li:not(:last-child):after {
+    content: " / ";
 }
 
 [data-theme-toggle] {
     display: flex;
-    align-items:center;
+    background: none;
+    border:none;
     gap: 8px;
     cursor: pointer;
+    padding: 0;
+    font-size: 1em;
     font-family: var(--font);
-    font-size: 18px;
-    background-color: var(--color-primary);
-    color: var(--color-background);
-    border-radius: 16px;
-    padding: 6px;
+    color: var(--color-link);
 }
 
 [data-theme-toggle] span {
@@ -68,7 +100,7 @@ a:hover, .underline:hover {
 }
 
 [data-theme-toggle] i {
-    color: var(--color-background);
+    color: var(--color-primary);
 }
 
 .name-a {
@@ -149,8 +181,7 @@ h2 i {
     color: black
     }
 .underline {
-text-decoration: underline;
-color: blue
+    text-decoration: underline;
 }
 
 details img {
