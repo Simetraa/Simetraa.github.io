@@ -26,20 +26,30 @@ body {
 }
 
 .gallery-images > li > img {
-    height: unset;
+    /* height: unset; */
 }
 
 .project-item {
     display: flex;
+}
+
+.align-left {
     flex-direction: row; /* Stack elements vertically */
 }
 
-.align-left > .description {
-    flex: 1;
+.align-right {
+    flex-direction: row-reverse;
 }
 
-.align-left > .gallery {
+.description {
+    padding: 32px;
     flex: 2;
+}
+
+.gallery {
+    flex: 1.5;
+    margin: 16px;
+
 }
 
 [data-theme-toggle] span {

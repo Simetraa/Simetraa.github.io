@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glyphs</title>
-    <link rel="stylesheet" href="assets/mobile.css" />
-    <link
-      rel="stylesheet"
-      media="only screen and (min-width:720px)"
-      href="assets/"
-    />
+    <title>Projects</title>
+    <link rel="stylesheet" href="assets/styles/mobile.css" />
+    <link rel="stylesheet" media="only screen and (min-width:720px)" href="assets/styles/desktop.css"/>
+
+    <script src="assets/js/gallery.js" defer></script>
+
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -18,37 +18,19 @@
 
   <body>
     <h1>Projects</h1>
-
     <div>
-      <section>
         <div class="project-item align-left">
+          <a name="protonwatcher"></a>
           <div class="description"> 
-            <h2>Journal</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              euismod sollicitudin libero. Suspendisse potenti. Quisque faucibus
-              cursus ante eget gravida. Pellentesque cursus euismod tortor
-              blandit ultrices. Fusce mattis nulla non magna ultrices imperdiet.
-              Phasellus vitae volutpat nunc. Nullam viverra bibendum tincidunt.
-              Mauris interdum ipsum mollis, pulvinar sapien ut, mattis felis.
-              Vivamus in semper justo. Nunc accumsan tristique dapibus.
-              Curabitur sit amet lobortis orci, ac egestas libero.
-            </p>
-            <p>
-              Duis sit amet viverra arcu. Proin consequat nulla risus, molestie
-              eleifend nisl efficitur vel. Pellentesque eget augue id leo
-              pellentesque pretium id porttitor magna. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos
-              himenaeos. Curabitur in neque eu nisl suscipit varius.
-              Pellentesque efficitur dapibus consectetur. Curabitur diam ex,
-              tempor eget scelerisque id, auctor at enim. Ut a vehicula erat.
-              Mauris blandit ante et nisl imperdiet finibus. Nullam massa leo,
-              facilisis vitae congue sit amet, pellentesque feugiat metus.
-              Phasellus non ipsum eget erat porta faucibus. Mauris condimentum
-              congue condimentum. Sed turpis diam, ornare id feugiat ac,
-              efficitur quis risus. Nulla facilisi. Duis eleifend ornare dui,
-              vitae rhoncus enim pretium in. Proin sed nunc neque.
-            </p>
+            <h2>ProtonWatcher</h2>
+            <ul>
+              <li>Scans ProtonVPN logs for port changes, and applies them to qBittorent via its Web API</li>
+              <li>Written in Go</li>
+              <li>Lightweight and efficient</li>
+              <li>Uses regular expressions to parse logs</li>
+              <li>Configurable settings including interval, username & password, and log path</li>
+              <li>Automates manual port configuration</li>
+            </ul>
           </div>
           <div class="gallery" index="0">
             <div class="controls">
@@ -58,10 +40,107 @@
             </div>
             <ul class="gallery-images">
               <li class="active">
-                <img src="assets/profile.webp" />
+                <img src="assets/images/protonwatcher_screenshot.PNG" alt="screenshot of ProtonWatcher running"/>
               </li>
               <li>
-                <img src="assets/home.png" />
+                <img src="assets/images/protonwatcher_code.PNG" alt="screenshot of ProtonVPN codebase"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="project-item align-right">
+          <div class="description">
+            <h2>College Website</h2>
+            <ul>
+              <li>First year university project</li>
+              <li>Fictional collage website</li>
+              <li>Responsive design using media queries</li>
+              <li>Course data from SQL database</li>
+              <li>Rendered with PHP</li>
+              <li>Accessibility verified to WCAG guidelines with Lighthouse</li>
+            </ul>
+          </div>
+          <div class="gallery" index="0">
+            <div class="controls">
+              <button class="prev">Previous</button>
+              <div class="active-label"></div>
+              <button class="next">Next</button>
+            </div>
+            <ul class="gallery-images">
+              <li class="active">
+                <img src="assets/images/cantor_collage_courses.png" alt="cantor collage courses page"/>
+              </li>
+              <li>
+                <img src="assets/images/cantor_collage_home.png" alt="cantor collage home page"/>
+              </li>
+              <li>
+                <img src="assets/images/cantor_collage_home_menu.png" alt="cantor collage home menu">
+              </li>
+                            <li>
+                <img height="500" src="assets/images/cantor_collage_mobile_menu.png" alt="cantor collage mobile menu"/>
+              </li>
+              <li>
+                <img height="500" src="assets/images/cantor_collage_about_us.png" alt="cantor collage about us page"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-item align-left">
+          <div class="description">
+            <h2>Inventory Management System</h2>
+            <ul>
+              <li>Second year university project</li>
+              <li>Atlas Books - Bookshop inventory management system</li>
+              <li>Introduction to Agile methodology</li>
+              <li>Responsive design using media queries</li>
+              <li>Written using PHP Laravel</li>
+              <li>Unit tested</li>
+              <li>Features include
+                <ul>
+                  <li>PDF report generation</li>
+                  <li>Multiple branch support</li>
+                  <li>Acccount management</li>
+                  <li>Inventory transfer between branches</li>
+                  <li>Reservations, with email notifications</li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+          <div class="gallery" index="0">
+            <div class="controls">
+              <button class="prev">Previous</button>
+              <div class="active-label"></div>
+              <button class="next">Next</button>
+            </div>
+            <ul class="gallery-images">
+              <li class="active">
+                <img src="assets/images/atlas_branches.png" alt="atlas books branches page"/>
+              </li>
+              <li>
+                <img src="assets/images/atlas_catalogue.png" alt="atlas books catalogue page"/>
+              </li>
+              <li>
+                <img src="assets/images/atlas_dashboard.png" alt="atlas books dashboard page">
+              </li>
+                            <li>
+                <img src="assets/images/atlas_inventory.png" alt="atlas books inventory page"/>
+              </li>
+              <li>
+                <img src="assets/images//atlas_purchases.png" alt="atlas books purchases page"/>
+              </li>
+              <li>
+                <img src="assets/images/atlas_report.png" alt="atlas books report page"/>
+              </li>
+              <li>
+                <img src="assets/images/atlas_code1.PNG" alt="atlas books codebase">
+              </li>
+              <li>
+                <img src="assets/images/atlas_code2.PNG" alt="atlas books codebase">
+              </li>
+              <li>
+                <img src="assets/images/atlas_code3.PNG" alt="atlas books codebase">
               </li>
             </ul>
           </div>
@@ -69,31 +148,22 @@
         <div class="project-item align-right">
           <div class="description">
             <h2>Energy Efficiency Calculator</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              euismod sollicitudin libero. Suspendisse potenti. Quisque faucibus
-              cursus ante eget gravida. Pellentesque cursus euismod tortor
-              blandit ultrices. Fusce mattis nulla non magna ultrices imperdiet.
-              Phasellus vitae volutpat nunc. Nullam viverra bibendum tincidunt.
-              Mauris interdum ipsum mollis, pulvinar sapien ut, mattis felis.
-              Vivamus in semper justo. Nunc accumsan tristique dapibus.
-              Curabitur sit amet lobortis orci, ac egestas libero.
-            </p>
-            <p>
-              Duis sit amet viverra arcu. Proin consequat nulla risus, molestie
-              eleifend nisl efficitur vel. Pellentesque eget augue id leo
-              pellentesque pretium id porttitor magna. Class aptent taciti
-              sociosqu ad litora torquent per conubia nostra, per inceptos
-              himenaeos. Curabitur in neque eu nisl suscipit varius.
-              Pellentesque efficitur dapibus consectetur. Curabitur diam ex,
-              tempor eget scelerisque id, auctor at enim. Ut a vehicula erat.
-              Mauris blandit ante et nisl imperdiet finibus. Nullam massa leo,
-              facilisis vitae congue sit amet, pellentesque feugiat metus.
-              Phasellus non ipsum eget erat porta faucibus. Mauris condimentum
-              congue condimentum. Sed turpis diam, ornare id feugiat ac,
-              efficitur quis risus. Nulla facilisi. Duis eleifend ornare dui,
-              vitae rhoncus enim pretium in. Proin sed nunc neque.
-            </p>
+            <ul>
+              <li>First year university project</li>
+              <li>Written with PHP & TypeScript</li>
+              <li>Responsive design using media queries</li>
+              <li>Features include
+                <ul>
+                  <li>Browse & filter nearby buildings' energy efficiency rating (EER)</li>
+                  <li>Add new buildings, and new values</li>
+                  <li>EER is dynamically calculated</li>
+                  <li>Quick calculate EER without adding a building</li>
+                  <li>Save relevant buildings to user accounts</li>
+                  <li>Map view</li>
+                </ul>
+              </li>
+
+            </ul>
           </div>
           <div class="gallery" index="0">
             <div class="controls">
@@ -103,38 +173,27 @@
             </div>
             <ul class="gallery-images">
               <li class="active">
-                <img src="assets/profile.webp" />
+                <img src="assets/images/eercalculator_browse.png" alt="eercalculator browse page"/>
               </li>
               <li>
-                <img src="assets/home.png" />
+                <img src="assets/images/eercalculator_building.png" alt="eercalculator building page"/>
+              </li>
+              <li>
+                <img src="assets/images/eercalculator_dashboard.png" alt="eercalculator dashboard page">
+              </li>
+                            <li>
+                <img src="assets/images/eercalculator_edit_building.png" alt="eercalculator edit building page"/>
+              </li>
+              <li>
+                <img src="assets/images/eercalculator_quick_calculate.png" alt="eercalculator quick calculate page"/>
+              </li>
+              <li>
+                <img src="assets/images/eercalculator_saved.png" alt="eercalculator saved buildings page"/>
               </li>
             </ul>
           </div>
         </div>
-      </section>
-      <script>
-        document.querySelectorAll(".gallery").forEach((gallery) => {
-          let index = 0;
-          const prevButtonEl = gallery.querySelector(".prev");
-          const activeLabelEl = gallery.querySelector(".active-label");
-          const nextButtonEl = gallery.querySelector(".next");
-          const galleryItems = gallery.querySelectorAll(".gallery-images > li");
-          const galleryImagesLength = galleryItems.length;
 
-          function update(n) {
-            console.log(n);
-            galleryItems[index].classList.remove("active");
-            index = (index + galleryImagesLength + n) % galleryImagesLength;
-            galleryItems[index].classList.add("active");
-            activeLabelEl.textContent = `${index + 1} / ${galleryImagesLength}`;
-          }
-
-          activeLabelEl.textContent = `${index + 1} / ${galleryImagesLength}`;
-
-          prevButtonEl.addEventListener("click", () => update(-1));
-          nextButtonEl.addEventListener("click", () => update(1));
-        });
-      </script>
     </div>
   </body>
 </html>

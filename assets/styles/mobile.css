@@ -106,6 +106,13 @@ a:hover, .underline:hover {
     align-self: center;
 }
 
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 150%;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+
 #age {
     padding: .2em .4em;
     margin: 0;
@@ -139,6 +146,11 @@ h2 i {
 
 .prevent-hyperlink {
     text-decoration: none;
+    color: black
+    }
+.underline {
+text-decoration: underline;
+color: blue
 }
 
 details img {
@@ -146,3 +158,64 @@ details img {
     width: -webkit-fill-available;
     width: 100%;
 }
+
+.flex-horizontal {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gallery {
+    height: min-content;
+    position: relative;
+    width: 100%;
+}
+
+
+.controls {
+    position: absolute;
+    display: flex;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(156, 153, 147, 0.75);
+    padding: 8px;
+    border-radius: 12px;
+    z-index: 4;
+    width: max-content;
+}
+
+.controls button {
+    font-family: 'Courier New', Courier, monospace;;
+}
+
+.gallery-images {
+    margin-block: 0;
+    padding-inline-start: 0;
+
+}
+
+.gallery-images > li {
+    display: none;
+    list-style: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.gallery-images > li.active {
+    display: block;
+}
+
+.gallery-images > li > img {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 12px;
+}
+
