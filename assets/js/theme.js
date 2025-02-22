@@ -17,11 +17,10 @@ if (localStorageTheme !== null) {
 }
 
 function setTheme(theme) {
-    themeIconEl.classList.toggle("fa-moon");
-    themeIconEl.classList.toggle("fa-sun");
     bodyEl.setAttribute("data-theme", theme);
     themeTextEl.textContent = theme === "dark" ? "Dark mode" : "Light mode";
-
+    themeIconEl.classList.toggle("fa-moon", theme === "dark");
+    themeIconEl.classList.toggle("fa-sun", theme === "light");
 }
 
 themeButtonEl.addEventListener("click", function () {
