@@ -15,18 +15,22 @@ import "../styles/global.css";
 
     <script is:inline>
       const localStorageTheme = localStorage.getItem("theme");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
 
-      let theme;
+      var theme;
 
-      if (localStorageTheme !== null) {
+      if (localStorageTheme != null) {
         theme = localStorageTheme;
       } else if (prefersDark) {
         theme = "dark";
       } else {
         theme = "light";
       }
-      console.log("Setting: ", theme);
+
+      window.localStorage.setItem("theme", theme);
+
       document.documentElement.setAttribute("data-theme", theme);
       console.log(
         "Setting theme to",

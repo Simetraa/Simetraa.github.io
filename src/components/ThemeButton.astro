@@ -51,10 +51,11 @@ import { Icon } from "astro-icon/components";
 </button>
 
 <script>
+  console.log("Entered theme button");
   const themeButtonEl = document.querySelector("[data-theme-toggle]");
 
-  const localStorageTheme = localStorage.getItem("theme") ?? "";
-  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+  const localStorageTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
   var theme: string;
 
