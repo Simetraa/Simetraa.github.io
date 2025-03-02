@@ -89,31 +89,6 @@ header nav ul li:not(:last-child):after {
 
 
 
-
-.name-a {
-    color: #AA0000
-}
-.name-r {
-    color: #ffa500
-}
-.name-t {
-    color: #b8860b
-}
-.name-e {
-    color: #00AA00
-}
-.name-m {
-    color: #5555FF
-}
-.name-i {
-    color: #FF55FF
-}
-.name-s {
-    color: #AA00AA
-}
-.name {
-    font-weight: bolder;
-}
 .profile {
     display: flex;
     flex-direction: column;
