@@ -1,0 +1,119 @@
+---
+import Footer from "../../Footer.astro";
+import Header from "../../Header.astro";
+import Age from "./Age.astro";
+import ContactDetails from "./ContactDetails.astro";
+import RainbowName from "./RainbowName.astro";
+import profilePicture from "../../../assets/profile.png";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="profile">
+  <div>
+    <h1>Hello world ^-^</h1>
+    <div class="bio">
+      <p>
+        Hi! I'm
+        <RainbowName />
+        & this is my personal website!
+
+        <p>
+          I'm a software engineering student from the UK. I'm <Age />. I like
+          reading, learning new languages and programming!
+        </p>
+        <p>
+          My favourite author is Terry Pratchett, and I'm learning German &
+          Dutch currently.
+        </p>
+        <p>
+          You can see some of my projects on my <a
+            href="https://github.com/Simetraa">GitHub</a
+          >, or see descriptions and screenshots in <a href="/projects"
+            >Projects</a
+          >!
+        </p>
+      </p>
+    </div>
+  </div>
+  <Image
+    class="profile-img"
+    src={profilePicture}
+    alt="My profile picture"
+    width="236"
+    height="236"
+  />
+</section>
+<style>
+  h2 > [data-icon] {
+    color: var(--brand-color);
+    vertical-align: center;
+  }
+</style>
+
+<h2>
+  Projects<Icon name="fa-solid:code" />
+</h2>
+<ul>
+  <li>
+    My <a href="https://github.com/Simetraa/Simetraa">.dotfile</a> (scripts to set
+    up my workspace just the way I like it)
+  </li>
+  <li>
+    <a href="https://github.com/Simetraa/connect-four">Connect Four</a> - A game
+    of connect four written in Typescript & Go
+  </li>
+  <li>
+    <a href="https://github.com/Simetraa/ProtonWatcher">ProtonWatcher</a> - a script
+    to watch ProtonVPN logs and automatically update qBittorrent
+  </li>
+  <li>
+    A set of <a href="/glyphs">handcoded SVG images</a> of glyphs from The Owl House
+  </li>
+  <li>
+    A <a href="https://github.com/Simetraa/bandcamp_dl">tool</a> for downloading
+    albums from Bandcamp
+  </li>
+</ul>
+
+<hr />
+
+<h2>Technologies / Tools<Icon name="fa6-solid:computer" /></h2>
+<ul class="technologies">
+  <li>
+    <h3>Web Development</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript/TypeScript</li>
+      <li>PHP</li>
+      <li>Laravel</li>
+    </ul>
+  </li>
+  <li>
+    <h3>Other</h3>
+    <ul>
+      <li>Python</li>
+      <li>C#</li>
+      <li>Go</li>
+      <li>Java</li>
+      <li>Linux</li>
+      <li>Bash</li>
+    </ul>
+  </li>
+  <li>
+    <h3>Tooling</h3>
+    <ul>
+      <li>Visual Studio Code</li>
+      <li>Visual Studio</li>
+      <li>Pycharm</li>
+      <li>Goland</li>
+      <li>PHPStorm</li>
+      <li>GitHub</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<ContactDetails />

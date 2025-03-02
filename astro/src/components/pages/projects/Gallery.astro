@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+import type { GalleryItem } from "./GalleryItem";
+const { images } = Astro.props;
+---
+
+<script>
+  document.querySelectorAll(".gallery").forEach((gallery) => {
+    let index = 0;
+    const prevButtonEl = gallery.querySelector(".prev")!;
+    const activeLabelEl = gallery.querySelector(".active-label")!;
+    const nextButtonEl = gallery.querySelector(".next")!;
+    const galleryItems = gallery.querySelectorAll(".gallery-images > li")!;
+    const galleryImagesLength = galleryItems.length;
+
+    function update(n: number) {
+      galleryItems[index].classList.remove("active");
+      index = (index + galleryImagesLength + n) % galleryImagesLength;
+      galleryItems[index].classList.add("active");
+      activeLabelEl.textContent = `${index + 1} / ${galleryImagesLength}`;
+    }
+
+    activeLabelEl.textContent = `${index + 1} / ${galleryImagesLength}`;
+
+    prevButtonEl.addEventListener("click", () => update(-1));
+    nextButtonEl.addEventListener("click", () => update(1));
+  });
+</script>
+
+<style>
+  .gallery-images > li > img {
+    height: unset;
+    max-height: 500px;
+  }
+
+  .gallery {
+    height: min-content;
+    position: relative;
+    width: 100%;
+    flex: 1.5;
+  }
+
+  @media screen and (min-width: 890px) {
+    .gallery {
+      margin: 16px;
+    }
+  }
+
+  .controls {
+    position: absolute;
+    display: flex;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(156, 153, 147, 0.75);
+    padding: 8px;
+    border-radius: 12px;
+    z-index: 4;
+    width: max-content;
+  }
+
+  .controls button {
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  .gallery-images {
+    margin-block: 0;
+    padding-inline-start: 0;
+  }
+
+  .gallery-images > li {
+    display: none;
+    list-style: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+
+  .gallery-images > li.active {
+    display: block;
+  }
+
+  .gallery-images > li > img {
+    max-height: 500px;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 12px;
+  }
+</style>
+
+<div class="gallery">
+  <div class="controls">
+    <button class="prev">Previous</button>
+    <div class="active-label"></div>
+    <button class="next">Next</button>
+  </div>
+  <ul class="gallery-images">
+    {
+      images.map((item: GalleryItem, index: number) => (
+        <li class={index == 0 ? "active" : ""}>
+          <Image
+            src={item.data}
+            alt={item.alt}
+            height={item.mobile ? "500" : undefined}
+          />
+        </li>
+      ))
+    }
+  </ul>
+</div>

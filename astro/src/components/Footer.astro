@@ -1,0 +1,16 @@
+---
+import { format } from "date-fns";
+
+const currentDate = new Date();
+const date = format(currentDate, "dd/MM/yyyy");
+const datetimeDate = format(currentDate, "yyyy-MM-dd");
+---
+
+<style>
+  footer {
+    text-align: center;
+    color: grey;
+  }
+</style>
+
+<footer>Site last updated <time datetime={datetimeDate}>{date}</time></footer>

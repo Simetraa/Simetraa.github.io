@@ -1,0 +1,24 @@
+---
+import ThemeButton from "./ThemeButton.astro";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPage = pathname.slice(1); // remove the first "/"
+
+function isActive(activePage: string) {
+  return currentPage === activePage ? "activated" : "";
+}
+---
+
+<header>
+  <div>
+    <h2>artemis@simetra:~$ ls</h2>
+    <nav>
+      <ul>
+        <li><a href="/" class={isActive("")}>Home</a></li>
+        <li>
+          <a href="/projects" class={isActive("projects")}>Projects</a>
+        </li>
+        <li><ThemeButton /></li>
+      </ul>
+    </nav>
+  </div>
+</header>

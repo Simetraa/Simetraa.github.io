@@ -1,0 +1,83 @@
+---
+import { Icon } from "astro-icon/components";
+import DiscordCopy from "./DiscordCopy.astro";
+---
+
+<style>
+  ul {
+    list-style-type: none;
+    margin-left: 20px;
+    padding-left: 0;
+  }
+  [data-icon] {
+    vertical-align: text-top;
+  }
+
+  .links ul > li {
+    display: flex;
+    gap: 8px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #copy-span > div {
+    display: inline-block;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  let copyIconEl = document.getElementById("copy-icon")!;
+  let checkIconEl = document.getElementById("check-icon")!;
+
+  let copySpanEl = document.getElementById("copy-span")!;
+  copySpanEl.addEventListener("click", copyDiscord);
+
+  function copyDiscord() {
+    navigator.clipboard.writeText("Artemis#5435");
+    copyIconEl.classList.add("hidden");
+    checkIconEl.classList.remove("hidden");
+
+    setTimeout(() => {
+      copyIconEl.classList.remove("hidden");
+      checkIconEl.classList.add("hidden");
+    }, 1000);
+  }
+</script>
+
+<h2>
+  Links<Icon name="fa6-regular:user" />
+</h2>
+
+<ul class=".links">
+  <li>
+    <Icon name="fa-brands:github" />
+
+    <a
+      rel="noopener"
+      class="prevent-hyperlink"
+      target="_blank"
+      href="https://github.com/Simetraa"
+      ><span class="underline">Github/Simetraa</span>
+      <Icon name="fa6-solid:arrow-up-right-from-square" />
+    </a>
+    <span class="fa-li"><i class="fa-brands fa-github"></i></span>
+  </li>
+  <li>
+    <Icon name="fa6-solid:envelope" />
+    <a href="mailto:simetra@simetra.dev">E-mail/simetra@simetra.dev</a>
+  </li>
+  <li>
+    <Icon name="fa-brands:discord" />
+    <span id="copy-span">
+      <span class="underline">Discord/Artemis#5435</span>
+      <div>
+        <Icon id="copy-icon" name="fa-solid:copy" />
+        <Icon id="check-icon" class="hidden" name="fa-solid:check" />
+      </div>
+    </span>
+    <noscript>Javascript is disabled</noscript>
+  </li>
+</ul>

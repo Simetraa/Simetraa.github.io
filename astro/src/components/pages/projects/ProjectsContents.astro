@@ -1,0 +1,187 @@
+---
+import Gallery from "./Gallery.astro";
+import profilePicture from "../../../assets/profile.png";
+import { GalleryItem } from "./GalleryItem";
+import ProjectItem from "./ProjectItem.astro";
+import ao3_code1 from "../../../assets/projects/ao3_code1.png";
+import ao3_code2 from "../../../assets/projects/ao3_code2.png";
+import ao3_code3 from "../../../assets/projects/ao3_code3.png";
+import ao3_code4 from "../../../assets/projects/ao3_code4.png";
+import ao3_info_author from "../../../assets/projects/ao3_info_author.png";
+import ao3_info_work from "../../../assets/projects/ao3_info_work.png";
+import ao3_search_work from "../../../assets/projects/ao3_search_work.png";
+import atlas_branches from "../../../assets/projects/atlas_branches.png";
+import atlas_catalogue from "../../../assets/projects/atlas_catalogue.png";
+import atlas_code1 from "../../../assets/projects/atlas_code1.png";
+import atlas_code2 from "../../../assets/projects/atlas_code2.png";
+import atlas_code3 from "../../../assets/projects/atlas_code3.png";
+import atlas_dashboard from "../../../assets/projects/atlas_dashboard.png";
+import atlas_inventory from "../../../assets/projects/atlas_inventory.png";
+import atlas_purchases from "../../../assets/projects/atlas_purchases.png";
+import atlas_report from "../../../assets/projects/atlas_report.png";
+import atlas_reservations from "../../../assets/projects/atlas_reservations.png";
+import cantor_collage_about_us from "../../../assets/projects/cantor_collage_about_us.png";
+import cantor_collage_courses from "../../../assets/projects/cantor_collage_courses.png";
+import cantor_collage_home_menu from "../../../assets/projects/cantor_collage_home_menu.png";
+import cantor_collage_home from "../../../assets/projects/cantor_collage_home.png";
+import cantor_collage_mobile_menu from "../../../assets/projects/cantor_collage_mobile_menu.png";
+import eercalculator_browse from "../../../assets/projects/eercalculator_browse.png";
+import eercalculator_building from "../../../assets/projects/eercalculator_building.png";
+import eercalculator_dashboard from "../../../assets/projects/eercalculator_dashboard.png";
+import eercalculator_edit_building from "../../../assets/projects/eercalculator_edit_building.png";
+import eercalculator_quick_calculate from "../../../assets/projects/eercalculator_quick_calculate.png";
+import eercalculator_saved from "../../../assets/projects/eercalculator_saved.png";
+import protonwatcher_code from "../../../assets/projects/protonwatcher_code.png";
+import protonwatcher_screenshot from "../../../assets/projects/protonwatcher_screenshot.png";
+
+const protonWatcherImages = [
+  new GalleryItem(protonwatcher_code, "screenshot of ProtonVPN codebase"),
+  new GalleryItem(
+    protonwatcher_screenshot,
+    "screenshot of ProtonWatcher running"
+  ),
+];
+
+const collegeWebsiteImages = [
+  new GalleryItem(cantor_collage_courses, "cantor collage courses page"),
+  new GalleryItem(cantor_collage_home, "cantor collage home page"),
+  new GalleryItem(cantor_collage_home_menu, "cantor collage home menu"),
+  new GalleryItem(cantor_collage_mobile_menu, "cantor collage mobile menu"),
+  new GalleryItem(cantor_collage_about_us, "cantor collage about us page"),
+];
+
+const inventoryManagementSystemImages = [
+  new GalleryItem(atlas_branches, "atlas books branches page"),
+  new GalleryItem(atlas_catalogue, "atlas books catalogue page"),
+  new GalleryItem(atlas_dashboard, "atlas books dashboard page"),
+  new GalleryItem(atlas_inventory, "atlas books inventory page"),
+  new GalleryItem(atlas_purchases, "atlas books purchases page"),
+  new GalleryItem(atlas_report, "atlas books report page"),
+  new GalleryItem(atlas_code1, "atlas books codebase"),
+  new GalleryItem(atlas_code2, "atlas books codebase"),
+  new GalleryItem(atlas_code3, "atlas books codebase"),
+];
+
+const energyEfficiencyCalculatorImages = [
+  new GalleryItem(eercalculator_browse, "eercalculator browse page"),
+  new GalleryItem(eercalculator_building, "eercalculator building page"),
+  new GalleryItem(eercalculator_dashboard, "eercalculator dashboard page"),
+  new GalleryItem(
+    eercalculator_edit_building,
+    "eercalculator edit building page"
+  ),
+  new GalleryItem(
+    eercalculator_quick_calculate,
+    "eercalculator quick calculate page"
+  ),
+  new GalleryItem(eercalculator_saved, "eercalculator saved buildings page"),
+];
+const ao3Images = [
+  new GalleryItem(ao3_search_work, "search work command"),
+  new GalleryItem(ao3_info_author, "info author command"),
+  new GalleryItem(ao3_info_work, "info work command"),
+  new GalleryItem(ao3_code1, "ao3 scraper WatchRemoveCommand class"),
+  new GalleryItem(ao3_code2, "ao3 scraper Author class"),
+  new GalleryItem(ao3_code3, "ao3 scraper AuthorSearch class"),
+  new GalleryItem(ao3_code4, "ao3 scraper DownloadAuthorCommand class"),
+];
+---
+
+<div class="projects">
+  <ProjectItem images={protonWatcherImages}>
+    <h2>ProtonWatcher</h2>
+    <ul>
+      <li>
+        Scans ProtonVPN logs for port changes, and applies them to qBittorent
+        via its Web API
+      </li>
+      <li>Written in Go</li>
+      <li>Lightweight and efficient</li>
+      <li>Uses regular expressions to parse logs</li>
+      <li>
+        Configurable settings including interval, username & password, and log
+        path
+      </li>
+      <li>Automates manual port configuration</li>
+    </ul>
+  </ProjectItem>
+  <ProjectItem images={collegeWebsiteImages}>
+    <h2>College Website</h2>
+    <ul>
+      <li>First year university project</li>
+      <li>Fictional collage website</li>
+      <li>Responsive design using media queries</li>
+      <li>Course data from SQL database</li>
+      <li>Rendered with PHP</li>
+      <li>Accessibility verified to WCAG guidelines with Lighthouse</li>
+    </ul>
+  </ProjectItem>
+  <ProjectItem images={inventoryManagementSystemImages}>
+    <h2>Inventory Management System</h2>
+    <ul>
+      <li>Second year university project</li>
+      <li>Atlas Books - Bookshop inventory management system</li>
+      <li>Introduction to Agile methodology</li>
+      <li>Responsive design using media queries</li>
+      <li>Written using PHP Laravel</li>
+      <li>Unit tested</li>
+      <li>
+        Features include
+        <ul>
+          <li>PDF report generation</li>
+          <li>Multiple branch support</li>
+          <li>Acccount management</li>
+          <li>Inventory transfer between branches</li>
+          <li>Reservations, with email notifications</li>
+        </ul>
+      </li>
+    </ul>
+  </ProjectItem>
+  <ProjectItem images={energyEfficiencyCalculatorImages}>
+    <h2>Energy Efficiency Calculator</h2>
+    <ul>
+      <li>First year university project</li>
+      <li>Written with PHP &amp; TypeScript</li>
+      <li>Responsive design using media queries</li>
+      <li>
+        Features include
+        <ul>
+          <li>
+            Browse &amp; filter nearby buildings' energy efficiency rating (EER)
+          </li>
+          <li>Add new buildings, and new values</li>
+          <li>EER is dynamically calculated</li>
+          <li>Quick calculate EER without adding a building</li>
+          <li>Save relevant buildings to user accounts</li>
+          <li>Map view</li>
+        </ul>
+      </li>
+    </ul>
+  </ProjectItem>
+
+  <ProjectItem images={ao3Images}>
+    <h2>Fanfiction API Library &amp; Client</h2>
+    <ul>
+      <li>Second year university project</li>
+      <li>
+        <a href="https://archiveofourown.org/">Archive of Our Own</a> fanfiction
+        archive web scraper
+      </li>
+      <li>Written with C#</li>
+      <li>Parsed with AngleSharp</li>
+      <li>Command line interface using System.CommandLine</li>
+      <li>Unit tested</li>
+      <li>
+        Features include
+        <ul>
+          <li>Coloured output</li>
+          <li>Downloading works</li>
+          <li>Viewing work info</li>
+          <li>Viewing user info</li>
+          <li>Searching for works</li>
+          <li>Watching for work updates</li>
+        </ul>
+      </li>
+    </ul>
+  </ProjectItem>
+</div>
