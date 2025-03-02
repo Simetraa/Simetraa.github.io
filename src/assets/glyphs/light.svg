@@ -1,0 +1,14 @@
+<svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        * {
+            stroke: black
+        }
+    </style>
+    <circle cx="50.5" cy="50.5" r="50" />
+    <polygon points="5.4626 69.5 50.5 34.6323 95.5374 69.5" />
+    <polyline points="41.791,19.5 50.5,1.16535 59.209,19.5" />
+    <circle cx="50.5" cy="24.5" r="10" />
+    <line x1="50.5" y1="101" x2="50.5" y2="34" />
+    <line x1="41.5231" y1="53.4195" x2="57.6227" y2="45.3696" />
+    <line x1="41.5231" y1="60.1528" x2="57.6227" y2="52.1029" />
+</svg>

@@ -1,0 +1,17 @@
+<svg width="101" height="101" viewBox="0 0 101 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        * {
+            stroke: black
+        }
+    </style>
+    <circle cx="50.5" cy="50.5" r="50" />
+    <circle cx="50.5" cy="35" r="15.5" />
+
+    <path d="M50.5,1Q35.5,20,35,35.5" />
+    <path d=" M50.5,1Q66.5,20,66,35.5" />
+
+    <path d=" M25.5,75Q25,50,50.5,20" />
+    <path d="M75.5,75Q75,50,50.5,20" />
+    <circle cx="50.5" cy="75.5" r="2" />
+    <circle cx="50.5" cy="75.5" r="25" />
+</svg>
