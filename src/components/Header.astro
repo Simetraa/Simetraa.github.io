@@ -1,7 +1,7 @@
 ---
 import ThemeButton from "./ThemeButton.astro";
 const pathname = new URL(Astro.request.url).pathname;
-const currentPage = pathname.slice(1); // remove the first "/"
+const currentPage = pathname.slice(1, -1); // remove the first "/"
 
 function isActive(activePage: string) {
   return currentPage === activePage ? "activated" : "";
