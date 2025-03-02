@@ -6,7 +6,7 @@ import "../styles/global.css";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +26,7 @@ import "../styles/global.css";
       } else {
         theme = "light";
       }
+      console.log("Setting: ", theme);
       document.documentElement.setAttribute("data-theme", theme);
       console.log(
         "Setting theme to",
