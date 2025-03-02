@@ -7,6 +7,17 @@ var now = new Date();
 var age = differenceInYears(now, birthday);
 ---
 
+<style>
+  #age {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+</style>
+
 <script>
   function updateAge() {
     var birthday = new Date(2002, 10 - 1, 4);

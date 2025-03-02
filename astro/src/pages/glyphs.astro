@@ -1,0 +1,33 @@
+---
+import IndexContents from "../components/pages/index/IndexContents.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import fire from "../assets/glyphs/fire.svg";
+import light from "../assets/glyphs/light.svg";
+import ice from "../assets/glyphs/ice.svg";
+import plant from "../assets/glyphs/plant.svg";
+
+import { Image } from "astro:assets";
+---
+
+<BaseLayout>
+  <h1>Glyphs</h1>
+  <p>Handwritten SVG glyphs from The Owl House</p>
+  <p>Code on <a href="https://github.com/Simetraa/glyphs">Github</a></p>
+
+  <details>
+    <summary>Light glyph</summary>
+    <Image src={fire} alt="Light glyph" />
+  </details>
+  <details>
+    <summary>Ice glyph</summary>
+    <Image src={ice} alt="Ice glyph" />
+  </details>
+  <details>
+    <summary>Plant glyph</summary>
+    <Image src={plant} alt="Plant glyph" />
+  </details>
+  <details>
+    <summary>Fire glyph</summary>
+    <Image src={fire} alt="Fire glyph" />
+  </details>
+</BaseLayout>

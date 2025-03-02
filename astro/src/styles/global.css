@@ -24,6 +24,9 @@ body {
     line-height: 150%;
     overflow-x: hidden;
     font-size: 18px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column  ;
 }
 
 i {
@@ -122,21 +125,7 @@ header nav ul li:not(:last-child):after {
     align-self: center;
 }
 
-body {
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 150%;
-    overflow-x: hidden;
-    font-size: 18px;
-}
 
-#age {
-    padding: .2em .4em;
-    margin: 0;
-    background-color: rgba(175, 184, 193, 0.2);
-    border-radius: 6px;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-}
 
 
 hr {
