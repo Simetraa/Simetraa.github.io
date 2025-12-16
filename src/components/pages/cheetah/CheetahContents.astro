@@ -40,7 +40,7 @@
       });
     }
 
-    Promise.all([load("cheetah.png"), load("water.jpeg")]).then(
+    Promise.all([load("/cheetah.png"), load("/water.jpeg")]).then(
       ([cheetah, bg]) => {
         cheetahImage.src = cheetah.src;
         backgroundImage.src = bg.src;
