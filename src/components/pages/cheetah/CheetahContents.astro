@@ -1,0 +1,109 @@
+<div class="block">
+  <canvas id="canvas" width="150px" height="150"></canvas>
+  <br />
+  <audio
+    id="wash-audio"
+    src="washing_machine_sound.mp3"
+    autoplay
+    loop
+    controls="controls"></audio>
+
+  <script is:inline>
+    const audio = document.getElementById("wash-audio");
+    document.addEventListener("click", () => {
+      audio.play();
+    });
+    const canvas = document.getElementById("canvas");
+    canvas.width = 350;
+    canvas.height = 350;
+
+    const ctx = canvas.getContext("2d");
+
+    const cheetahSize = 180;
+
+    let angle = 0;
+    let rotationSpeed = 0.005;
+    let lastTime = 0;
+
+    var centreX = canvas.width / 2;
+    var centreY = canvas.height / 2;
+
+    const cheetahImage = new Image();
+    const backgroundImage = new Image();
+
+    function load(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = reject;
+        img.src = src;
+      });
+    }
+
+    Promise.all([load("cheetah.png"), load("water.jpeg")]).then(
+      ([cheetah, bg]) => {
+        cheetahImage.src = cheetah.src;
+        backgroundImage.src = bg.src;
+        requestAnimationFrame(render);
+      }
+    );
+
+    function render(currentTime) {
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+
+      ctx.fillStyle = "white";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.save();
+      ctx.translate(centreX - 10, centreY);
+      ctx.rotate(angle);
+      ctx.translate(-centreX + 10, -centreY);
+      ctx.drawImage(
+        cheetahImage,
+        canvas.width / 2 - cheetahSize / 2 - 10,
+        canvas.height / 2 - cheetahSize / 2 + 10,
+        cheetahSize,
+        cheetahSize
+      );
+      angle += rotationSpeed * deltaTime;
+      ctx.restore();
+
+      ctx.fillStyle = "green";
+      ctx.lineWidth = 5;
+      ctx.shadowColor = "gray";
+      ctx.strokeRect(20, 20, canvas.width - 40, canvas.height - 40);
+
+      ctx.beginPath();
+      ctx.fillStyle = `rgba(102, 160, 167, 0.8)`;
+      const waterPattern = ctx.createPattern(backgroundImage, "repeat");
+      ctx.globalAlpha = 0.7;
+      ctx.fillStyle = waterPattern;
+      ctx.arc(canvas.width / 2, canvas.height / 2 + 15, 120, 0, Math.PI);
+      ctx.fill();
+      ctx.globalAlpha = 1.0;
+      ctx.fillStyle = "black";
+      ctx.beginPath();
+      ctx.font = "19px monospace";
+
+      var currentDate = new Date();
+      var hours = currentDate.getHours();
+      var minutes = currentDate.getMinutes();
+
+      let timeString = `${hours.toString().padStart(2, "0")}:${minutes
+        .toString()
+        .padStart(2, "0")}`;
+
+      ctx.fillText(timeString, canvas.width - 92, 60);
+
+      ctx.arc(canvas.width / 2, canvas.height / 2 + 15, 120, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      ctx.strokeRect(35, 35, 60, 45);
+
+      ctx.strokeRect(canvas.width - 95, 35, 60, 45);
+
+      requestAnimationFrame(render);
+    }
+  </script>
+</div>
